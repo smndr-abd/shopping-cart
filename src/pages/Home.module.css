@@ -1,0 +1,259 @@
+.page {
+  padding-top: var(--nav-h);
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 4rem 2.5rem;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 520px;
+  position: relative;
+  z-index: 1;
+}
+
+.heroEyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text);
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.heroSub {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.heroBtn:hover {
+  background: var(--text);
+  transform: translateY(-1px);
+}
+
+/* ── Hero Art ── */
+.heroArt {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle1, .circle2, .circle3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.circle1 {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(200,169,110,0.12);
+  animation: spin 30s linear infinite;
+}
+
+.circle2 {
+  width: 260px;
+  height: 260px;
+  border-color: rgba(200,169,110,0.2);
+  animation: spin 20s linear infinite reverse;
+}
+
+.circle3 {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(200,169,110,0.08), transparent);
+  border-color: rgba(200,169,110,0.35);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+/* ── Marquee ── */
+.marqueeTrack {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+  background: var(--bg-2);
+}
+
+.marqueeInner {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marqueeItem {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 1.5rem;
+}
+
+.dot { color: var(--accent); }
+
+/* ── Features ── */
+.features {
+  padding: 6rem 2.5rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  padding: 2.5rem;
+  background: var(--bg-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: background var(--transition);
+}
+
+.featureCard:hover {
+  background: var(--bg-3);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.featureLabel {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.featureDesc {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ── CTA ── */
+.cta {
+  padding: 6rem 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.ctaInner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.ctaEyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.ctaBtn {
+  padding: 0.75rem 2.5rem;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.ctaBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(200,169,110,0.05);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 3rem 1.25rem;
+  }
+  .heroArt { display: none; }
+  .featuresGrid { grid-template-columns: 1fr; gap: 1px; }
+  .features, .cta { padding: 3rem 1.25rem; }
+}

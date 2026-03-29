@@ -1,0 +1,216 @@
+.page {
+  padding-top: calc(var(--nav-h) + 3rem);
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--text);
+}
+
+.clearBtn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.clearBtn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* ── Empty state ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 6rem 1rem;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  color: var(--text-dim);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.emptySub {
+  color: var(--text-muted);
+  max-width: 320px;
+  line-height: 1.7;
+}
+
+.shopLink {
+  margin-top: 0.5rem;
+  padding: 0.7rem 2rem;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.shopLink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Layout ── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Summary ── */
+.summaryCard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+
+.summaryTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.free { color: var(--success); }
+
+.freeShippingNote {
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.75rem;
+  background: rgba(200,169,110,0.06);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--bg);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.checkoutBtn:hover {
+  background: var(--text);
+  transform: translateY(-1px);
+}
+
+.continueLink {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  transition: color var(--transition);
+}
+
+.continueLink:hover {
+  color: var(--accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .summaryCard {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner { padding: 0 1.25rem; }
+}
