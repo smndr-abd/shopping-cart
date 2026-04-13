@@ -34,4 +34,16 @@ shopping-cart/
 └── README.md
 
 
+1. Clone the repository
+git clone https://github.com/smndr-abd/shopping-cart.git
+cd shopping-cart
+
+2. Install dependencies
+npm install
+
+3. Run the development server
+npm run dev
+
+
+
 
