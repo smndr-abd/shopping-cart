@@ -34,6 +34,7 @@ shopping-cart/
 └── README.md
 
 
+
 1. Clone the repository
 git clone https://github.com/smndr-abd/shopping-cart.git
 cd shopping-cart
