@@ -1,6 +1,10 @@
 Shopping Cart App
 
+
+
 A modern shopping cart application built with Vite and JavaScript. This app allows users to browse products, add items to a cart, and manage their shopping experience smoothly.
+
+
 
 Features
 Browse products
@@ -14,6 +18,7 @@ Tech Stack
 Frontend: JavaScript (Vite)
 Build Tool: Vite
 Deployment: Vercel
+
 
 
 Project Structure
@@ -45,6 +50,15 @@ npm install
 3. Run the development server
 npm run dev
 
+
+
+Usage
+
+Open the app in your browser
+Browse available products
+Click "Add to Cart"
+Adjust quantities or remove items
+View total price in real-time
 
 
 
